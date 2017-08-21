@@ -1,0 +1,62 @@
+{
+  "provider": {
+    "name": "Allinoneunittestapp_Provider"
+  },
+  "consumer": {
+    "name": "Allinoneunittestapp_Consumer"
+  },
+  "interactions": [
+    {
+      "description": "a request for Allinoneunittestapp",
+      "request": {
+        "method": "GET",
+        "path": "/allinoneunittestapp/rest2/sample"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "code": "SUCCESS",
+          "message": "This is success"
+        }
+      },
+      "providerStates": [
+        {
+          "name": "test Provider state2"
+        }
+      ]
+    },
+    {
+      "description": "a request for Allinoneunittestapp",
+      "request": {
+        "method": "GET",
+        "path": "/allinoneunittestapp/rest/sample"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "code": "SUCCESS",
+          "message": "This is success"
+        }
+      },
+      "providerStates": [
+        {
+          "name": "test Provider state"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "pact-specification": {
+      "version": "3.0.0"
+    },
+    "pact-jvm": {
+      "version": "3.5.0"
+    }
+  }
+}
